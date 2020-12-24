@@ -19,6 +19,9 @@ age = 5    =>   4-5
 age = 17   =>   15-20
 */
 
-function datingRange(age){
-  //return min-max
+const datingRange = (age) => {
+  var min = age > 14 ? age/2 + 7 : age - (0.10 * age);
+  var max = age > 14 ? (age-7)*2 : age + (0.10 * age);
+  
+  return Math.floor(min) + "" + '-' + Math.floor(max) + ""
 }
